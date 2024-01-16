@@ -68,7 +68,7 @@ def scrapeOffers(driver, e):
     return offers_found
 
 def sendEmail(result, i):
-    myEmail = 'jolete1964@gmail.com'
+    myEmail = ''
     smtp_server = 'smtp.gmail.com'
     smtp_port = 587
     msg = EmailMessage()
@@ -83,7 +83,7 @@ def sendEmail(result, i):
     msg['To'] = myEmail
     server = smtplib.SMTP(smtp_server, smtp_port)
     server.starttls()
-    server.login(myEmail, 'eiaisfgwblvkuxhw')
+    server.login(myEmail, '')
     server.send_message(msg)
     server.quit()
 
